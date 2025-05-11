@@ -2,93 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Muhammed Sahil | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <!-- NAVBAR -->
   <nav>
-    <div class="brand">Muhammed Sahil</div>
+    <a href="#top" class="brand">Muhammed Sahil</a>
     <div class="nav-links">
       <a href="#about">about</a>
       <a href="#resume">resume</a>
-      <a href="#contact">contact</a>
-      <a href="https://linkedin.com/in/YOUR-LINK" target="_blank">linkedin</a>
+      <a href="#booking">contact</a>
+      <a href="https://www.linkedin.com/in/muhammedsahil/" target="_blank">linkedin</a>
     </div>
   </nav>
 
-  <section class="hero">
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
     <div class="hero-image-side">
       <img src="img.png" alt="Muhammed Sahil" />
     </div>
     <div class="hero-text-side">
-      <h1>Hello, I'm <span>Muhammed Sahil</span></h1>
-      <p>Mechanical Engineer & Aspiring Entrepreneur, NIT Calicut</p>
-      <a href="#contact" class="btn btn-primary-custom">contact</a>
+      <h1>Hello, I’m <span>Muhammed Sahil</span></h1>
+      <p>Aspiring Entreprenuer & Mechanical Engineer, NIT Calicut</p>
+      <a href="#booking" class="btn btn-primary-custom">connect with me</a>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <p>I’m Muhammed Sahil, a Mechanical Engineer who thrives on solving problems, learning by doing, and bringing clarity to chaos. I approach every challenge with curiosity and a systems mindset—whether it’s something I’ve done before or something I’m figuring out for the first time.</p>
-    <p>While I’m still early in many fields, I lean toward the managerial side — organizing people, aligning goals, and keeping momentum. I’m especially curious about how things fit together: products, processes, business models, teams.</p>
-    <p>This site is a small part of that journey — a place to think out loud, document what I’m learning, and share what I build along the way.</p>
+    <h2 class="section-title">About Me</h2>
+    <p>I’m Muhammed Sahil, a Mechanical Engineer who thrives on solving problems, learning by doing, and bringing clarity to chaos. I approach every challenge with curiosity and a systems mindset.</p>
+    <p>I lean toward the managerial side — organizing people, aligning goals, and keeping momentum. I’m especially curious about how things fit together: products, processes, business models, teams.</p>
+    <p>This site is a place to think out loud, document what I’m learning, and share what I build along the way.</p>
   </section>
 
-  <section id="resume" class="about-section resume-section">
+  <!-- RESUME -->
+  <section id="resume" class="resume-section">
     <h2 class="section-title">Resume</h2>
     <div class="resume-grid">
       <div class="resume-card">
         <h5>Summary</h5>
-        <p>Final-year engineering student with experience leading cross-functional teams and executing diverse technical projects. Skilled in optimizing processes and resource management.</p>
+        <p>Final-year engineering student with experience leading cross-functional teams and driving diverse technical projects. Skilled in optimizing processes and resource management.</p>
       </div>
       <div class="resume-card">
         <h5>Achievements</h5>
         <ul>
           <li>Top 15 finalist in Ather Energy’s Byte Battles 2.0 hackathon.</li>
-          <li>Provisional patent filed for EMG-based assistive device aiding mobility.</li>
+          <li>Provisional patent filed for EMG-based head assistive device.</li>
+        </ul>
+      </div>
+      <div class="resume-card">
+        <h5>Projects</h5>
+        <strong>EMG-Driven Head Assistive Device</strong><br>
+        <em>NIT Calicut — Mar 2024 – Present</em>
+        <ul>
+          <li>Built EMG-based smart head-support (77% accuracy).</li>
+          <li>Trained Random Forest classifier (AUC 0.99).</li>
+        </ul>
+        <strong>MR Elastomer Soft Gripper</strong><br>
+        <em>NIT Calicut — Apr 2023 – Mar 2024</em>
+        <ul>
+          <li>Developed tunable-stiffness robotic gripper with MREs.</li>
+        </ul>
+      </div>
+      <div class="resume-card">
+        <h5>Positions of Responsibility</h5>
+        <strong>Student Convenor, NSS (NIT Calicut)</strong><br>
+        <small>Jan 2024 – Apr 2025</small>
+        <ul>
+          <li>Led 250+ volunteers in healthcare & social projects.</li>
+        </ul>
+        <strong>Head of Events, Ragam’25</strong><br>
+        <small>Sep 2024 – May 2025</small>
+        <ul>
+          <li>Oversaw 53+ cultural & proshow events (90,000+ attendees).</li>
         </ul>
       </div>
     </div>
-
-    <div class="resume-list">
-      <h5><strong>Design & Development of EMG Head Assistive Device</strong></h5>
-      <p><em>NIT Calicut — Mar 2024 - Present</em></p>
-      <ul>
-        <li>Built an EMG-based smart head-support (77% accuracy).</li>
-        <li>Trained ML model, AUC 0.99. Designed ergonomic actuator.</li>
-      </ul>
-
-      <h5><strong>MR Elastomer Gripper Dev</strong></h5>
-      <p><em>NIT Calicut — Apr 2023 - Mar 2024</em></p>
-      <ul>
-        <li>Developed tunable stiffness gripper using MREs.</li>
-        <li>Fabricated molds, validated with magnetic testing.</li>
-      </ul>
-
-      <h5><strong>Conveyor System Optimization</strong></h5>
-      <p><em>Impex Pvt. Ltd — May 2024 - Jul 2024</em></p>
-      <ul>
-        <li>Redesigned layout, improved workflow via buffer zones.</li>
-      </ul>
-
-      <h5><strong>Student Convenor, NSS (NITC)</strong></h5>
-      <p><em>Jan 2024 - Apr 2025</em></p>
-      <ul>
-        <li>Led 250+ volunteers. Drove healthcare + social projects.</li>
-      </ul>
-
-      <h5><strong>Head of Events, Ragam’25</strong></h5>
-      <p><em>Sep 2024 - May 2025</em></p>
-      <ul>
-        <li>Oversaw 53+ events. Coordinated 90,000+ attendees.</li>
-      </ul>
+    <div class="download-wrap">
+      <a href="https://drive.google.com/file/d/1btV3wMgEY0ekXZO4cxYY_9EB-OvGGH1s/view?usp=drive_link" target="_blank" class="btn btn-outline-light">
+        Download Resume (PDF)
+      </a>
     </div>
   </section>
 
-  <section id="contact" class="about-section">
-    <h2>Contact</h2>
-    <p>To connect, just drop a message at <strong>muhammed@example.com</strong> or <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">LinkedIn</a>.</p>
+  <!-- BOOKING -->
+  <section id="booking" class="booking-section">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdNv7RCvGXK9QkuJ_IxcP6av5uzyuXQDSTSaM2L06vmBUK5-g/viewform?embedded=true"
+      frameborder="0" marginheight="0" marginwidth="0"
+      style="width:100%; max-width:700px; height:800px; border-radius:8px;"
+    >Loading…</iframe>
   </section>
+
+  <!-- particles.js & stats.js from CDN + our init -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // scroll‐to‐top progress bar
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const pct = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    });
+  </script>
+  </body>
 </body>
 </html>

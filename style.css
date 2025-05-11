@@ -1,162 +1,187 @@
-/* Reset & Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #0f0f0f;
-    color: #fff;
-    scroll-behavior: smooth;
-    line-height: 1.6;
-  }
-  
-  /* NAVBAR */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #0f0f0f;
-    z-index: 1000;
-  }
-  .brand {
-    font-size: 1rem;
-    color: #aaa;
-  }
-  .nav-links a {
-    color: #ccc;
-    margin-left: 1.5rem;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .nav-links a:hover {
-    color: #fff;
-  }
-  
-  /* HERO SECTION */
+/* RESET & BASE */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  background: #0f0f0f; color: #fff;
+  scroll-behavior: smooth; line-height:1.6;
+}
+
+#progress-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: rgba(138, 227, 150, 0.1);
+  z-index: 10000;
+}
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background: rgb(113, 161, 109);
+  transition: width 0.1s ease-out;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed; top: 0; left: 0; width:100%;
+  display: flex; align-items: center;
+  padding: 1rem 2rem; z-index: 3;
+  background: rgba(0,0,0,0.2);
+}
+.brand {
+  color: #aaa; text-decoration: none;
+  font-weight: 400; letter-spacing: 1px;
+}
+.nav-links {
+  margin-left: auto;
+}
+.nav-links a {
+  color: #ccc; margin-left: 1.5rem;
+  text-decoration: none; font-weight: 500;
+  transition: color .3s;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* PARTICLES.JS CANVAS */
+#particles-js {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; z-index: 0;
+}
+
+/* MAKE PAGE CONTENT PASS POINTERS THROUGH TO THE CANVAS */
+.hero, .about-section, .resume-section, .booking-section {
+  position: relative; z-index: 1;
+  pointer-events: none;
+}
+/* BUT KEEP INTERACTIVITY FOR BUTTONS/LINKS/IFRAME */
+.hero a, .nav-links a, .download-wrap a, .booking-section iframe {
+  pointer-events: auto;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;      /* still vertically center within the reduced space */
+  height: calc(100vh - 8rem); /* subtract some so the center point is higher */
+  padding: 4rem 2rem 0;     /* give 4rem at top, no bottom padding */
+}
+.hero-image-side {
+  flex: 1; display:flex; justify-content:center; align-items:center;
+}
+.hero-image-side img {
+  max-width:350px; width:100%;
+  border-radius:12px;
+  filter: grayscale(1) brightness(1.1) contrast(1.1);
+  box-shadow: 0 0 60px rgba(0,0,0,0.7);
+  margin-left: 20%;
+}
+.hero-text-side {
+  flex: 1; padding: 0 2rem;
+}
+.hero-text-side h1 {
+  font-size: 2.7rem; font-weight:bold; margin-bottom:.5rem;
+}
+.hero-text-side h1 span {
+  color: #98b59b;
+}
+.hero-text-side p {
+  font-size:1.2rem; color:#ccc; margin-bottom:1.5rem;
+}
+.btn {
+  display: inline-block; text-decoration:none;
+  padding:.6rem 1.8rem; border-radius:50px; font-weight:500;
+}
+.btn-primary-custom {
+  border:2px solid rgb(152, 180, 163); color:#fff; background:transparent;
+  transition:.3s;
+}
+.btn-primary-custom:hover {
+  background:rgb(111, 169, 115); color:#000;
+}
+
+/* SECTION TITLES & LAYOUT */
+.section-title {
+  text-align:center; font-size:2rem; margin-bottom:2rem;
+}
+.about-section,
+.resume-section,
+.booking-section {
+  max-width: 1100px; margin:0 auto;
+  padding: 8rem 1rem 3rem;
+}
+
+.about-section p {
+  width: 600px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* RESUME GRID */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap:1.5rem;
+}
+.resume-card {
+  background: #1f1f1f;
+  padding: 1.5rem; border-radius:8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  display:flex; flex-direction:column;
+}
+.resume-card h5 {
+  margin-bottom:.75rem;
+}
+.resume-card ul {
+  margin-top:.5rem; padding-left:1.2rem; flex-grow:1;
+}
+.download-wrap {
+  text-align:center; margin-top:2rem;
+}
+.btn-outline-light {
+  border:1px solid #fff; color:#fff; background:transparent;
+  transition:.3s;
+  padding:.6rem 1.8rem; border-radius:50px; display:inline-block;
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* BOOKING IFRAME */
+.booking-section {
+  max-width: 800px;
+  margin: 4rem auto 2rem;  /* reduced top/bottom spacing */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.booking-section iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 800px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px) {
   .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 40px 60px;
-    gap: 60px;
-    min-height: 100vh;
+    flex-direction: column;
+    text-align:center;
+    height: auto;
+    margin-top: 4rem;
+    padding-top: 2rem;
+  }
+  .hero-image-side,
+  .hero-text-side {
+    width: 100%; padding:0 1rem;
   }
   .hero-image-side img {
-    max-width: 350px;
-    width: 80%;
-    border-radius: 12px;
-    filter: grayscale(1) brightness(1.1) contrast(1.1);
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
+    margin-bottom:2rem;
   }
-  .hero-text-side {
-    max-width: 500px;
-  }
-  .hero-text-side h1 {
-    font-size: 2.7rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .hero-text-side h1 span {
-    color: #98b59b;
-  }
-  .hero-text-side p {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 20px;
-  }
-  .btn-primary-custom {
-    padding: 10px 30px;
-    border: 2px solid #f90;
-    background: transparent;
-    color: #fff;
-    border-radius: 50px;
-    transition: 0.3s;
-    font-weight: 500;
-    text-decoration: none;
-  }
-  .btn-primary-custom:hover {
-    background-color: #f90;
-    color: #000;
-  }
-  
-  /* ABOUT & SECTIONS */
-  .about-section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
-  }
-  .about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 15px;
-  }
-  
-  /* RESUME */
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .resume-grid {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .resume-card {
-    background: #1f1f1f;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    flex: 1 1 300px;
-  }
-  .resume-card h5 {
-    margin-bottom: 0.5rem;
-  }
-  .resume-card ul {
-    padding-left: 1.2rem;
-  }
-  .resume-list {
-    margin-top: 2rem;
-  }
-  .resume-list h5 {
-    margin-top: 1.2rem;
-    font-size: 1rem;
-  }
-  .resume-list p {
-    color: #aaa;
-    font-style: italic;
-  }
-  .resume-list ul {
-    margin-bottom: 1rem;
-    padding-left: 1.2rem;
-  }
-  
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .hero {
-      flex-direction: column;
-      padding-top: 160px;
-    }
-    .hero-text-side {
-      text-align: center;
-    }
-    .resume-grid {
-      flex-direction: column;
-    }
-  }
+}
