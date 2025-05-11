@@ -210,7 +210,7 @@ nav {
 }
 
 .booking-section iframe {
-  background-color: #fffdfd;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0);
@@ -218,15 +218,101 @@ nav {
 }
 
 /* RESPONSIVE */
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 6rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .resume-timeline {
-    padding-left: 0.5rem;
-    border-left: 2px solid #333;
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
   }
 
-  .timeline-item {
-    margin-left: 0.5rem;
-    padding-left: 0.5rem;
+  .nav-links {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding-top: 6rem;
+  }
+
+  .hero-image-side,
+  .hero-text-side {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .hero-image-side img {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    max-width: 80%;
+  }
+
+  .hero-text-side h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text-side p {
+    font-size: 1rem;
+  }
+
+  .about-section,
+  .resume-section,
+  .booking-section {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .resume-card {
+    padding: 1rem;
+  }
+
+  .booking-section iframe {
+    height: 700px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn,
+  .btn-primary-custom,
+  .btn-outline-light {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-side h1 {
+    font-size: 1.8rem;
+  }
+
+  .resume-card h5 {
+    font-size: 1rem;
+  }
+
+  .resume-card p,
+  .resume-card ul li {
+    font-size: 0.95rem;
+  }
+
+  .download-wrap {
+    margin-top: 1rem;
+  }
+}
 }
 }
