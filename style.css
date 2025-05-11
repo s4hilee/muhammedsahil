@@ -59,6 +59,27 @@ nav {
   pointer-events: auto;
 }
 
+.download-wrap {
+  text-align: center;
+  margin: 1rem 0 2.5rem;
+}
+
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.1);
+  color: #76c57e;
+}
+
 /* HERO */
 .hero {
   display: flex;
@@ -120,36 +141,66 @@ nav {
   color: #e0e0e0;
 }
 
-/* RESUME GRID */
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap:1.5rem;
-}
-.resume-card {
-  background: #1f1f1f;
-  padding: 1.5rem; border-radius:8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-  display:flex; flex-direction:column;
-}
-.resume-card h5 {
-  margin-bottom:.75rem;
-}
-.resume-card ul {
-  margin-top:.5rem; padding-left:1.2rem; flex-grow:1;
-}
-.download-wrap {
-  text-align:center; margin-top:2rem;
-}
-.btn-outline-light {
-  border:1px solid #fff; color:#fff; background:transparent;
-  transition:.3s;
-  padding:.6rem 1.8rem; border-radius:50px; display:inline-block;
-}
-.btn-outline-light:hover {
-  background: rgba(255,255,255,0.1);
+/* RESUME TIMELINE */
+.resume-timeline {
+  margin-top: 2.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #444;
 }
 
+.timeline-block {
+  margin-bottom: 3rem;
+}
+
+.timeline-block h3 {
+  color: #76c57e;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  background: #76c57e;
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.timeline-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.timeline-item ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  list-style: disc;
+  color: #ddd;
+}
+
+.timeline-item ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
 /* BOOKING IFRAME */
 .booking-section {
   max-width: 800px;
@@ -159,29 +210,23 @@ nav {
 }
 
 .booking-section iframe {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  height: 800px;
+  background-color: #fffdfd;
   border-radius: 8px;
-  border: none;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  filter: invert(1) hue-rotate(180deg); /* makes light UI darker */
 }
 
 /* RESPONSIVE */
-@media (max-width:768px) {
-  .hero {
-    flex-direction: column;
-    text-align:center;
-    height: auto;
-    margin-top: 4rem;
-    padding-top: 2rem;
+@media (max-width: 768px) {
+  .resume-timeline {
+    padding-left: 0.5rem;
+    border-left: 2px solid #333;
   }
-  .hero-image-side,
-  .hero-text-side {
-    width: 100%; padding:0 1rem;
+
+  .timeline-item {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
   }
-  .hero-image-side img {
-    margin-bottom:2rem;
-  }
+}
 }
