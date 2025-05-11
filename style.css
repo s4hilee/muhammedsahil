@@ -5,7 +5,9 @@ body {
   background: #0f0f0f; color: #fff;
   scroll-behavior: smooth; line-height:1.6;
 }
-
+#menu-toggle {
+  display: none;
+}
 #progress-container {
   position: fixed;
   top: 0; left: 0;
@@ -45,7 +47,7 @@ nav {
 
 /* PARTICLES.JS CANVAS */
 #particles-js {
-  position: absolute; top: 0; left: 0;
+  position: fixed; top: 0; left: 0;
   width: 100%; height: 100%; z-index: 0;
 }
 
@@ -129,19 +131,30 @@ nav {
 .resume-section,
 .booking-section {
   max-width: 1100px; margin:0 auto;
-  padding: 8rem 1rem 3rem;
+  padding: 8rem 1rem 1rem;
 }
 
 .about-section p {
-  width: 600px;
-  margin: 0 auto 1.5rem;
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: justify;
+  text-wrap: pretty;
+  padding-bottom: -1rem;
+}
+.about-section p:last-of-type {
+  margin-bottom: -3rem; /* reduce space below last paragraph */
 }
 
+
+
+
+
 /* RESUME TIMELINE */
+
+
 .resume-timeline {
   margin-top: 2.5rem;
   padding-left: 1rem;
@@ -219,100 +232,161 @@ nav {
 
 /* RESPONSIVE */
 /* ========== RESPONSIVE STYLES ========== */
-@media (max-width: 1024px) {
-  .hero {
-    padding-top: 6rem;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
   }
 
   .nav-links {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-left: 0;
   }
 
   .hero {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    padding: 2rem 1rem;
     height: auto;
-    padding-top: 6rem;
+    text-align: center;
   }
 
   .hero-image-side,
   .hero-text-side {
     width: 100%;
-    padding: 1rem;
+    padding: 0;
   }
 
   .hero-image-side img {
-    margin-left: 0;
-    margin-bottom: 2rem;
-    max-width: 80%;
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    object-position: 50% 20%;
   }
 
   .hero-text-side h1 {
     font-size: 2rem;
+    line-height: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text-side h1 span {
+    display: block;
   }
 
   .hero-text-side p {
     font-size: 1rem;
-  }
-
-  .about-section,
-  .resume-section,
-  .booking-section {
-    padding: 4rem 1rem 3rem;
-  }
-
-  .resume-card {
-    padding: 1rem;
-  }
-
-  .booking-section iframe {
-    height: 700px;
-    padding: 0;
-    width: 100%;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .btn,
   .btn-primary-custom,
   .btn-outline-light {
-    font-size: 0.9rem;
-    padding: 0.5rem 1.5rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-text-side h1 {
-    font-size: 1.8rem;
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-section,
+  .resume-section,
+  .booking-section {
+    padding: 0rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    text-align: justify;
+    margin-bottom: 1.2rem;
+  }
+
+  .resume-card {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 
   .resume-card h5 {
     font-size: 1rem;
   }
 
-  .resume-card p,
   .resume-card ul li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
-  .download-wrap {
-    margin-top: 1rem;
+  .booking-section iframe {
+    height: 600px;
+    width: 100%;
+  }
+
+  .btn-primary-custom {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links a {
+    margin: 0.75rem 0;
+    display: block;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 6rem;
+  }
+}
+
+/* Always hide the menu toggle checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Show hamburger icon only on mobile */
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
 }

@@ -7,152 +7,138 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Progress Bar -->
+  <div id="progress-container"><div id="progress-bar"></div></div>
 
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
   <!-- NAVBAR -->
   <nav>
     <a href="#top" class="brand">Muhammed Sahil</a>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <div class="nav-links">
       <a href="#about">about</a>
       <a href="#resume">resume</a>
       <a href="#booking">contact</a>
       <a href="https://www.linkedin.com/in/muhammedsahil/" target="_blank">linkedin</a>
+      <a href="mailto:muhammeds4hil@gmail.com">email</a>
     </div>
   </nav>
 
   <!-- PARTICLES BACKGROUND -->
   <div id="particles-js"></div>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero" id="top">
     <div class="hero-image-side">
       <img src="img.png" alt="Muhammed Sahil" />
     </div>
     <div class="hero-text-side">
       <h1>Hello, I’m <span>Muhammed Sahil</span></h1>
-      <p>Aspiring Entreprenuer & Mechanical Engineer, NIT Calicut</p>
+      <p>Aspiring Entrepreneur & Mechanical Engineer, NIT Calicut</p>
       <a href="#booking" class="btn btn-primary-custom">connect with me</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
   <section id="about" class="about-section">
     <h2 class="section-title">About Me</h2>
-    <p>I’m Muhammed Sahil, a Mechanical Engineer who thrives on solving problems, learning by doing, and bringing clarity to chaos. I approach every challenge with curiosity and a systems mindset.</p>
-    <p>I lean toward the managerial side — organizing people, aligning goals, and keeping momentum. I’m especially curious about how things fit together: products, processes, business models, teams.</p>
-    <p>This site is a place to think out loud, document what I’m learning, and share what I build along the way.</p>
+    <div class="about-content">
+      <p>I’m Muhammed Sahil, a Mechanical Engineer who thrives on solving problems, learning by doing, and bringing clarity to chaos. I approach every challenge with curiosity and a systems mindset.</p>
+      <p>I lean toward the managerial side — organizing people, aligning goals, and keeping momentum. I’m especially curious about how things fit together: products, processes, business models, teams.</p>
+      <p>This site is a place to think out loud, document what I’m learning, and share what I build along the way.</p>
+    </div>
   </section>
 
-  <!-- RESUME -->
+  <!-- RESUME SECTION -->
   <section id="resume" class="resume-section">
     <h2 class="section-title">Resume</h2>
     <div class="download-wrap">
-      <a href="https://drive.google.com/file/d/1KXe0vRWw4tUMV5k9lXsPGzNklM8KhHwL/view" target="_blank" class="btn btn-outline-light">
-        Download Resume (PDF)
-      </a>
+      <a href="https://drive.google.com/file/d/1btV3wMgEY0ekXZO4cxYY_9EB-OvGGH1s/view?usp=drive_link" target="_blank" class="btn btn-outline-light">Download Resume (PDF)</a>
     </div>
-  
     <div class="resume-timeline">
-  
-      <!-- PROJECTS -->
+
       <div class="timeline-block">
         <h3>Projects</h3>
-  
         <div class="timeline-item">
           <h4>Design & Development of EMG-Driven Active Head Assistive Device</h4>
           <p class="timeline-meta">NIT Calicut · Mar 2024 – Present</p>
           <ul>
-            <li>Co-developed an intelligent head-support using surface-EMG signals to predict and support head motion (77% accuracy).</li>
-            <li>Built & trained a Random Forest classifier achieving AUC 0.99.</li>
-            <li>Designed ergonomic 3D-printed mechanism delivering 8.7 N·m support across 25°–150° range.</li>
+            <li>Co-developed an intelligent head-support using EMG signals (77% accuracy).</li>
+            <li>Built Random Forest classifier (AUC 0.99).</li>
+            <li>Designed ergonomic support mechanism (8.7 N·m torque).</li>
           </ul>
         </div>
-  
         <div class="timeline-item">
           <h4>MR Elastomer-Based Soft Gripper Development</h4>
           <p class="timeline-meta">NIT Calicut · Apr 2023 – Mar 2024</p>
           <ul>
-            <li>Developed soft robotic gripper using Magnetorheological Elastomers (MREs) with tunable stiffness.</li>
-            <li>Fabricated molds via SolidWorks and 3D printing for precise prototyping.</li>
-            <li>Conducted rheological & magnetic field tests to validate performance under variable conditions.</li>
+            <li>Created tunable stiffness robotic gripper with MREs.</li>
+            <li>Used SolidWorks & 3D printing for mold fabrication.</li>
+            <li>Validated using rheological & magnetic testing.</li>
           </ul>
         </div>
-  
         <div class="timeline-item">
-          <h4>Optimization of Conveyor System for TV Manufacturing Unit</h4>
+          <h4>Optimization of Conveyor System</h4>
           <p class="timeline-meta">Impex Pvt. Ltd · May 2024 – Jul 2024</p>
           <ul>
-            <li>Analyzed workflow bottlenecks with time-motion studies across assembly line.</li>
-            <li>Designed buffer zones and layout modifications to improve flow and space utilization.</li>
-            <li>Proposed integration of aging setup to align production with quality assurance standards.</li>
+            <li>Redesigned workflow and layout with buffer zones.</li>
+            <li>Proposed integration of aging setup with QA flow.</li>
           </ul>
         </div>
       </div>
-  
-      <!-- POSITIONS OF RESPONSIBILITY -->
+
       <div class="timeline-block">
         <h3>Positions of Responsibility</h3>
-  
         <div class="timeline-item">
-          <h4>Student Convenor, National Service Scheme (NIT Calicut)</h4>
+          <h4>Student Convenor, NSS</h4>
           <p class="timeline-meta">Jan 2024 – Apr 2025</p>
           <ul>
-            <li>Led a team of 250+ volunteers across healthcare, education, and social welfare projects.</li>
-            <li>Established strategic partnerships with NGOs and local authorities for health camps and environmental campaigns.</li>
+            <li>Led 250+ volunteers on healthcare and social projects.</li>
+            <li>Built NGO and government collaborations for community work.</li>
           </ul>
         </div>
-  
         <div class="timeline-item">
-          <h4>Head of Events, Ragam’25 (NIT Calicut)</h4>
+          <h4>Head of Events, Ragam’25</h4>
           <p class="timeline-meta">Sep 2024 – May 2025</p>
           <ul>
-            <li>Oversaw 53+ cultural, literary, and musical events in a festival with 90,000+ attendees.</li>
-            <li>Managed logistics, budgeting, risk assessment, and on-ground execution for workshops, exhibitions, and proshows.</li>
+            <li>Oversaw 53+ cultural events; managed 90,000+ attendees.</li>
+            <li>Handled logistics, budgeting, and event planning.</li>
           </ul>
         </div>
       </div>
-  
-      <!-- ACHIEVEMENTS -->
+
       <div class="timeline-block">
         <h3>Achievements</h3>
-  
         <div class="timeline-item">
           <ul>
-            <li>Selected among Top 15 nationwide in Ather Energy’s Byte Battles 2.0 embedded systems hackathon.</li>
-            <li>Provisional patent filed for an EMG-based head assistive device aiding children with motor neuron disabilities.</li>
+            <li>Top 15 finalist in Ather Energy’s Byte Battles 2.0 hackathon.</li>
+            <li>Provisional patent filed for EMG-based assistive device.</li>
           </ul>
         </div>
       </div>
-  
     </div>
   </section>
 
-  <!-- BOOKING -->
+  <!-- CONTACT / BOOKING SECTION -->
   <section id="booking" class="booking-section">
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSdNv7RCvGXK9QkuJ_IxcP6av5uzyuXQDSTSaM2L06vmBUK5-g/viewform?embedded=true"
-      frameborder="0" marginheight="0" marginwidth="0"
+      frameborder="0"
       style="width:100%; max-width:700px; height:800px; border-radius:8px;"
     >Loading…</iframe>
   </section>
 
-  <!-- particles.js & stats.js from CDN + our init -->
+  <!-- PARTICLES & STATS -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   <script src="script.js"></script>
-
   <script>
-    // scroll‐to‐top progress bar
     window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight =
-        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const pct = (scrollTop / scrollHeight) * 100;
       document.getElementById('progress-bar').style.width = pct + '%';
     });
   </script>
-  </body>
 </body>
 </html>

@@ -90,9 +90,14 @@ particlesJS("particles-js", {
   
   requestAnimationFrame(update);
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+// scroll‐to‐top progress bar
+window.addEventListener('scroll', () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     const pct = (scrollTop / scrollHeight) * 100;
-    document.getElementById('progress-bar').style.width = pct + '%';
+    const bar = document.getElementById('progress-bar');
+    if (bar) bar.style.width = pct + '%';
   });
